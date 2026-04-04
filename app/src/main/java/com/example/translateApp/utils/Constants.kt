@@ -11,3 +11,4 @@ const val REQUEST_CAMERA_PERMISSION = 30
 const val IS_CONTINUES_LISTEN = false
 const val IMAGE_URI = "ImageURI"
 const val CACHE_IMAGE_FOLDER = "images"
+const val APPLICATION_ID = "test"

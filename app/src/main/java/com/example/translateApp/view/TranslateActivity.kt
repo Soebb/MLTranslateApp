@@ -36,7 +36,6 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.lifecycle.ViewModelProvider
-import com.example.tempapplication.BuildConfig
 import com.example.tempapplication.R
 import com.example.tempapplication.databinding.ActivityMainBinding
 import com.example.translateApp.TranslateViewModel
@@ -1162,7 +1161,7 @@ class TranslateActivity : AppCompatActivity() {
     private fun launchCamera() {
         val tempFile = FileProvider.getUriForFile(
             this,
-            "${BuildConfig.APPLICATION_ID}.provider",
+            "${APPLICATION_ID}.provider",
             getTempFile(this, ".png")
         )
         tempFile.let { uri ->

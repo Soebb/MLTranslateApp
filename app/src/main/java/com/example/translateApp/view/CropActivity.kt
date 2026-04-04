@@ -6,8 +6,8 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
-import com.example.tempapplication.BuildConfig
 import com.example.tempapplication.databinding.ActivityCropBinding
+import com.example.translateApp.utils.APPLICATION_ID
 import com.example.translateApp.utils.CACHE_IMAGE_FOLDER
 import java.io.File
 import java.io.FileOutputStream
@@ -72,7 +72,7 @@ class CropActivity : AppCompatActivity() {
             e.printStackTrace()
         }
         val imageUri =
-            FileProvider.getUriForFile(this, "${BuildConfig.APPLICATION_ID}.provider", imageFile)
+            FileProvider.getUriForFile(this, "${APPLICATION_ID}.provider", imageFile)
         val resultIntent = Intent()
         resultIntent.setData(imageUri)
         setResult(RESULT_OK, resultIntent)
